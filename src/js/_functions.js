@@ -24,7 +24,7 @@
 
 
 // Реализация бургер-меню
-// import { burger } from './functions/burger';
+import { burger } from './functions/burger';
 
 
 // ========================================================================================
@@ -57,8 +57,8 @@
 
 
 // Получение высоты шапки сайта (не забудьте вызвать функцию)
-// import { getHeaderHeight } from './functions/header-height';
-// getHeaderHeight();
+import { getHeaderHeight } from './functions/header-height';
+getHeaderHeight();
 
 
 // ========================================================================================
@@ -195,7 +195,7 @@
 
 
 // Фикс фулскрин-блоков
-// import './functions/fix-fullheight';
+import './functions/fix-fullheight';
 
 
 // ========================================================================================

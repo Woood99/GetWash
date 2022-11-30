@@ -14,3 +14,23 @@
         background-color $transitionSpeed $transitionFunction,
         border $transitionSpeed $transitionFunction;
 }
+
+.btn-primary {
+    color: var(--blue);
+    font-size: 16px;
+    line-height: 140%;
+    border: 1px solid var(--white);
+    border-radius: 6px;
+    padding: 14px 100px;
+    background-color: transparent;
+    &:hover{
+        background-color: var(--blue);
+        color: var(--gallery);
+        border: 1px solid var(--blue);
+    }
+    &--fill {
+        background-color: var(--blue);
+        color: var(--gallery);
+        border: 1px solid var(--blue);
+    }
+}

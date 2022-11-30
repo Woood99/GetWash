@@ -1,0 +1,27 @@
+.nav {
+
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        font-size: 18px;
+        line-height: 140%;
+
+        @media (min-width:$tablet-min) {
+
+            &:not(:first-child) {
+                margin-left: 60px;
+            }
+        }
+    }
+
+    &__link {
+        transition: color $transitionSpeed $transitionFunction;
+
+        &:hover {
+            color: var(--blue);
+        }
+    }
+}

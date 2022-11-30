@@ -1,0 +1,115 @@
+.header {
+    padding: 25px 0;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width:$tablet-max) {
+            position: relative;
+        }
+    }
+
+    &__logo {
+        img {
+            max-width: none
+        }
+    }
+
+    &__nav {
+        margin-left: 35px;
+        display: flex;
+
+        .nav__list {
+            @include adaptiveValue("margin-right", 145, 65, 1170, 1024, 1);
+
+            @media (max-width:$tablet-max) {
+                margin: 0;
+                flex-direction: column;
+            }
+        }
+
+        .nav__item {
+
+            @media (max-width:$tablet-max) {
+                border-bottom: 1px solid var(--white);
+                width: 100%;
+                text-align: center;
+
+                &:first-child {
+                    border-top: 1px solid var(--white);
+                }
+            }
+        }
+
+        .nav__link {
+            @media (max-width:$tablet-max) {
+                padding: 30px 0;
+                width: 100%;
+            }
+        }
+
+        @media (max-width:$tablet-max) {
+            height: calc(var(--vh) - var(--header-height) + 1px);
+            display: none;
+            position: absolute;
+            flex-direction: column;
+            justify-content: space-between;
+            top: calc(100% + 18px);
+            margin: 0;
+            padding-bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #fff;
+            width: calc(100% + 30px);
+        }
+
+        &.menu--active {
+            display: flex;
+        }
+    }
+
+    &__btn {
+        padding: 13px 25px;
+        align-self: center;
+
+        @media (min-width:$tablet-min) {
+            margin-left: auto;
+        }
+    }
+
+    &__burger {
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        background-color: transparent;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+        @media (min-width:$tablet-min) {
+            display: none;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -18px;
+            height: calc(100% + (20px*2));
+            width: 1px;
+            background-color: var(--white);
+            pointer-events: none;
+        }
+    }
+
+    @media (max-width:$tablet-max) {
+        padding: 18px 0;
+        border-bottom: 1px solid var(--white);
+    }
+}

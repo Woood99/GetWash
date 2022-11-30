@@ -1,5 +1,5 @@
 // main
-$fontFamily: "asd";
+$fontFamily: "GT Eesti Pro";
 $fontSize: 14;
 $minWidth: 320;
 $maxWidth: 1920;
@@ -9,13 +9,19 @@ $containerWidth: calc($contentWidth + ($containerOffset * 2));
 
 // main colors
 $bodyColor: #fff; // Цвет body по умолчаниюу
-$mainColor: #000; // Цвет шрифта по умолчанию
+$mainColor: #72727E; // Цвет шрифта по умолчанию
 
 :root {
-
     // additional colors
-    --accent: #000;
-    --primary: #fff;
+    --gallery: #eee;
+    --shaft: #3a3a3a;
+    --gray: #686868;
+    --dark-gray: #72727E;
+    --silver: #C0C0C0;
+    --blue: #446DF6;
+    --dark-blue: #141B41;
+    --white: #E9ECF5;
+    --water: #F7F8FD;
 }
 
 
