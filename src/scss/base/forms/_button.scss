@@ -23,14 +23,28 @@
     border-radius: 6px;
     padding: 14px 100px;
     background-color: transparent;
-    &:hover{
+
+    &:hover {
         background-color: var(--blue);
         color: var(--gallery);
         border: 1px solid var(--blue);
     }
+
     &--fill {
         background-color: var(--blue);
         color: var(--gallery);
         border: 1px solid var(--blue);
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 140%;
+
+        &:hover {
+            background-color: var(--dark-blue);
+            border: 1px solid var(--dark-blue);
+        }
+
+        @media (max-width:$tablet-max) {
+            font-size: 16px;
+        }
     }
 }
