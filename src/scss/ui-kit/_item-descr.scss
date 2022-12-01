@@ -1,0 +1,37 @@
+.item-descr {
+    display: flex;
+    align-items: center;
+
+    &__icon {
+        width: 36px;
+        height: 36px;
+        fill: var(--blue);
+    }
+
+    &__text {
+        margin-left: 30px;
+
+        @media (max-width:$tablet-max) {
+            margin-left: 0;
+            margin-top: 30px;
+        }
+    }
+
+    &__title {
+        color: var(--dark-blue);
+        @include adaptiveValue("font-size", 24, 18);
+        line-height: 135%;
+    }
+
+    &__descr {
+        margin-top: 10px;
+        font-weight: 300;
+        @include adaptiveValue("font-size", 18, 14);
+        line-height: 135%;
+    }
+
+    @media (max-width:$tablet-max) {
+        text-align: center;
+        flex-direction: column;
+    }
+}
