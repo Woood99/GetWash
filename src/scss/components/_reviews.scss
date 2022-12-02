@@ -1,0 +1,113 @@
+.reviews {
+    @include adaptiveValue("margin-top", 140, 50);
+
+    &__title {
+        @media (max-width:$smallTablet-max) {
+            text-align: center;
+        }
+    }
+}
+
+.reviews-slider {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+
+    &__inner {
+        width: 710px;
+        margin: 0;
+
+        @media (max-width:$smallTablet-max) {
+            width: auto;
+        }
+    }
+
+    &__btns {
+        display: flex;
+        align-self: start;
+        margin-left: 35px;
+
+        @media (max-width:$smallTablet-max) {
+            margin-left: 0;
+            margin-top: 50px;
+            align-self: center;
+        }
+    }
+
+    &__btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: var(--blue);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background-color $transitionSpeed $transitionFunction;
+
+        svg {
+            flex: 0 0 20px;
+            width: 20px;
+            height: 20px;
+            fill: none;
+            stroke: #fff;
+            display: block;
+            transition: stroke $transitionSpeed $transitionFunction;
+        }
+
+        &_next {
+            transform: rotate(180deg);
+        }
+
+        &:not(:last-child) {
+            margin-right: 20px;
+
+            @media (max-width:$smallTablet-max) {
+                margin-right: 40px;
+            }
+        }
+
+        &:not(.swiper-button-disabled) {
+            &:hover {
+                background-color: darken(#446DF6, 8%);
+            }
+        }
+
+        &.swiper-button-disabled {
+            background-color: var(--water);
+            cursor: default;
+
+            svg {
+                stroke: var(--dark-gray);
+            }
+        }
+    }
+
+    @media (max-width:$smallTablet-max) {
+        margin-top: 30px;
+        flex-direction: column;
+    }
+}
+
+.reviews-slide {
+
+    &__text {
+        @include adaptiveValue("font-size", 18, 14);
+        line-height: 140%;
+        font-weight: 300;
+
+        @media (max-width:$smallTablet-max) {
+            text-align: center;
+        }
+    }
+
+    &__person {
+        margin-top: 60px;
+
+        @media (max-width:$smallTablet-max) {
+            justify-content: center;
+            margin-top: 24px;
+        }
+    }
+
+}

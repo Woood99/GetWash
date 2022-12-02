@@ -20,8 +20,8 @@ function initSliders() {
 
 
 
-    if (document.querySelector('.swiper')) {
-        new Swiper('.swiper', {
+    if (document.querySelector('.reviews-slider__inner')) {
+        new Swiper('.reviews-slider__inner', {
 
             // effect: 'fade',
             // autoplay: {
@@ -32,7 +32,7 @@ function initSliders() {
             observer: true,
             observeParents: true,
             slidesPerView: 1,
-            spaceBetween: 0,
+            spaceBetween: 75,
             autoHeight: true,
             speed: 800,
             // touchRatio: 0,
@@ -47,10 +47,10 @@ function initSliders() {
             // 	clickable: true,
             // },
             
-            // navigation: {
-            //     nextEl: '.about__more .more__item_next',
-            //     prevEl: '.about__more .more__item_prev',
-            // },
+            navigation: {
+                nextEl: '.reviews-slider__btn_next',
+                prevEl: '.reviews-slider__btn_prev',
+            },
 
             /*
             breakpoints: {

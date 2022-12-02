@@ -1,0 +1,90 @@
+.footer {
+    @include adaptiveValue("margin-top", 140, 60);
+    background-color: var(--dark-blue);
+    padding: 25px 0;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width:$tablet-max) {
+            flex-direction: column;
+            align-items: start;
+        }
+
+        @media (max-width:$mobile-max) {
+            align-items: center;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: var(--white);
+
+        .nav__list {
+            @include adaptiveValue("margin-right", 145, 65, 1170, 1024, 1);
+
+            @media (max-width:$tablet-max) {
+                flex-direction: column;
+                align-items: start;
+            }
+
+            @media (max-width:$mobile-max) {
+                margin-right: 0;
+                text-align: center;
+            }
+        }
+
+        .nav__item {
+            @media (max-width:$tablet-max) {
+                &:not(:first-child) {
+                    margin-top: 20px;
+                }
+            }
+
+            @media (max-width:$mobile-max) {
+                width: 100%;
+            }
+        }
+
+        .nav__link {
+            &:hover {
+                text-decoration: underline;
+                color: var(--white);
+            }
+        }
+
+        @media (max-width:$tablet-max) {
+            margin-top: 20px;
+            width: 100%;
+            align-items: start;
+        }
+
+        @media (max-width:$mobile-max) {
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+
+    &__btn {
+        background-color: transparent;
+        color: var(--white);
+        padding: 14px 25px;
+        border: 1px solid var(--dark-gray);
+
+        &:hover {
+            border: 1px solid var(--white);
+            background-color: var(--white);
+            color: var(--dark-blue);
+        }
+        @media (max-width:$mobile-max){
+             margin-top: 20px; 
+        }
+    }
+   @media (max-width:$tablet-max){
+    padding: 35px 0; 
+   }
+}
