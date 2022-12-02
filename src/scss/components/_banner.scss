@@ -1,0 +1,76 @@
+.banner {
+    @include adaptiveValue("margin-top", 112,50 );
+    &__inner {
+      @media (min-width:$tablet-min){
+        background-color: rgba(#446DF6, 0.85);
+        border-radius: 20px;
+        padding: 52px 70px 64px;
+        position: relative; 
+      }
+      @media (max-width:$tablet-max){
+        padding-top: 40px;
+      }
+    }
+
+    &__content {
+        max-width: 365px;
+
+        @media (max-width:$tablet-max) {
+            max-width: none;
+            text-align: center;
+        }
+    }
+
+    &__title {
+        color: var(--water);
+    }
+
+    &__subtitle {
+        margin-top: 15px;
+        color: var(--white);
+        font-weight: 350;
+        @include adaptiveValue("font-size", 18, 14);
+        line-height: 140%;
+    }
+
+    &__links {
+        margin-top: 45px;
+
+        @media (min-width:$tablet-min) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__link {
+        &:not(:first-child) {
+            margin-left: 20px;
+        }
+        @media (max-width:$tablet-max){
+            &:not(:first-child) {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+        }
+    }
+    &__img {
+        display: block;
+        @media (min-width:$tablet-min) {
+            position: absolute;
+            right: 60px;
+            bottom: 0;
+        }
+
+        @media (max-width:$desktop) {
+            width: 40%;
+        }
+        @media (max-width:$tablet-max){
+            width: auto;
+            margin: 20px auto 0;
+        }
+    }
+
+    @media (max-width:$tablet-max) {
+        background-color: rgba(#446DF6, 0.85);
+    }
+}

@@ -1,6 +1,5 @@
 .partners {
     @include adaptiveValue("padding-top", 50, 30);
-    @include adaptiveValue("padding-bottom", 112, 50);
 
     &__title {
         text-align: center;
