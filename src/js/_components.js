@@ -1,1 +1,2 @@
-// import './components/asd';
+import scrolling from "./components/scrolling";
+scrolling();
