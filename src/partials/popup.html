@@ -1,0 +1,66 @@
+<div class="graph-modal">
+    <div class="graph-modal__container get-access-modal" role="dialog" aria-modal="true" data-graph-target="get-access">
+        <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+            <svg>
+                <use xlink:href="img/sprite.svg#close"></use>
+            </svg>
+        </button>
+        <div class="graph-modal__content get-access-modal__content">
+            <h2 class="get-access-modal__title">
+                Стань нашим партнером
+                и начни зарабатывать:
+            </h2>
+            <form action="#" class="get-access-modal__form" id="get-access-form">
+                <label class="input-icon get-access-modal__label">
+                    <div class="input-icon__icon">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#edit"></use>
+                        </svg>
+                    </div>
+                    <input type="text" name="name"
+                        class="input-reset input-icon__input input-icon__input--name get-access-modal__input"
+                        placeholder="Введите имя">
+                </label>
+                <label class="input-icon get-access-modal__label">
+                    <div class="input-icon__icon">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#message"></use>
+                        </svg>
+                    </div>
+                    <input type="email" name="email"
+                        class="input-reset input-icon__input input-icon__input--email get-access-modal__input"
+                        placeholder="E-mail">
+                </label>
+                <label class="input-icon get-access-modal__label">
+                    <div class="input-icon__icon">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#call"></use>
+                        </svg>
+                    </div>
+                    <input type="tel" name="phone"
+                        class="input-reset input-icon__input input-icon__input--tel get-access-modal__input"
+                        placeholder="Номер телефона">
+                </label>
+                <div class="get-access-modal__checkboxs">
+                    <div class="get-access-modal__checkbox checkbox-primary">
+                        <input id="c_1" class="checkbox-primary__input" type="checkbox" value="yes">
+                        <label for="c_1" class="checkbox-primary__label">
+                            <span class="checkbox-primary__text">Я хочу получать новости на почтовый адрес</span>
+                        </label>
+                    </div>
+                    <div class="get-access-modal__checkbox checkbox-primary">
+                        <input id="c_2" class="checkbox-primary__input" type="checkbox" value="yes" checked>
+                        <label for="c_2" class="checkbox-primary__label">
+                            <span class="checkbox-primary__text">Я согласен учавствовать в сборе данных</span>
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-reset btn-primary btn-primary--fill get-access-modal__btn">Получить
+                    доступ</button>
+                <p class="get-access-modal__warning">
+                    Нажимая кнопку Вы принимаете <a href="#">политику конфиденциальности</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>

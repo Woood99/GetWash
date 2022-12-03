@@ -24,7 +24,9 @@
 
 
 // Реализация бургер-меню
-import { burger } from './functions/burger';
+import {
+    burger
+} from './functions/burger';
 
 
 // ========================================================================================
@@ -41,8 +43,8 @@ import { burger } from './functions/burger';
 
 
 // Реализация модального окна
-// import GraphModal from 'graph-modal';
-// const modal = new GraphModal();
+import GraphModal from 'graph-modal';
+const modal = new GraphModal();
 
 
 // ========================================================================================
@@ -57,7 +59,9 @@ import { burger } from './functions/burger';
 
 
 // Получение высоты шапки сайта (не забудьте вызвать функцию)
-import { getHeaderHeight } from './functions/header-height';
+import {
+    getHeaderHeight
+} from './functions/header-height';
 getHeaderHeight();
 
 
@@ -117,14 +121,52 @@ import "./functions/sliders";
 // ========================================================================================
 
 
-// import { validateForms } from './functions/validate-forms';
-// const rules1 = [...];
+import {
+    validateForms
+} from './functions/validate-forms';
+const rulesPrimary = [{
+        ruleSelector: '.input-icon__input--name',
+        rules: [{
+                rule: 'minLength',
+                value: 3,
+                errorMessage: 'Имя должно состоять минимум из 3 букв'
+            },
+            {
+                rule: 'required',
+                value: true,
+                errorMessage: 'Заполните имя!'
+            }
+        ]
+    },
+    {
+        ruleSelector: '.input-icon__input--email',
+        rules: [{
+                rule: 'required',
+                errorMessage: 'Введите свой email',
+            },
+            {
+                rule: 'email',
+                errorMessage: 'Email указан некорректно!',
+            }
+        ]
+    },
+    {
+        ruleSelector: '.input-icon__input--tel',
+        tel: true,
+        telError: 'Введите корректный телефон',
+        rules: [{
+            rule: 'required',
+            value: true,
+            errorMessage: 'Заполните телефон!'
+        }]
+    },
+];
 
-// const afterForm = () => {
-//   console.log('Произошла отправка, тут можно писать любые действия');
-// };
+const afterForm = () => {
+    console.log('Произошла отправка, тут можно писать любые действия');
+};
 
-// validateForms('.form-1', rules1, afterForm);
+validateForms('#get-access-form', rulesPrimary, afterForm);
 
 
 

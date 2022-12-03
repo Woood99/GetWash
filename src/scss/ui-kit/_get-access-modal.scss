@@ -1,0 +1,133 @@
+.graph-modal {
+
+    &__container {}
+
+    &__close {}
+
+    &__content {}
+}
+
+.get-access-modal {
+    max-width: 480px;
+    padding: 84px 40px 50px;
+
+    .graph-modal__close {
+        width: 24px;
+        height: 24px;
+        top: 33px;
+        right: 29px;
+
+        svg {
+            width: 100%;
+            height: 100%;
+            stroke: var(--dark-gray);
+            transition: stroke $transitionSpeed $transitionFunction;
+        }
+
+        &:hover {
+            svg {
+                stroke: var(--blue)
+            }
+        }
+
+        @media (max-width:$mobile-max) {
+            top: 18px;
+            right: 18px;
+        }
+    }
+
+    &__content {}
+
+    &__title {
+        @include adaptiveValue("font-size", 32, 21);
+        line-height: 125%;
+        text-align: center;
+        color: var(--dark-blue);
+    }
+
+    &__form {
+        margin-top: 75px;
+
+        @media (max-width:$tablet-max) {
+            margin-top: 35px;
+        }
+    }
+
+    &__label {
+        &:not(:first-child) {
+            margin-top: 30px;
+        }
+
+        @media (max-width:$tablet-max) {
+            &:not(:first-child) {
+                margin-top: 10px;
+            }
+        }
+    }
+
+    &__input {}
+
+    &__checkboxs {
+        margin-top: 30px;
+
+        @media (max-width:$tablet-max) {
+            margin-top: 15px;
+        }
+    }
+
+    &__checkbox {
+        &:not(:first-child) {
+            margin-top: 18px;
+        }
+
+        @media (max-width:$tablet-max) {
+            &:not(:first-child) {
+                margin-top: 10px;
+            }
+        }
+    }
+
+    &__btn {
+        display: block;
+        margin: 45px auto 0;
+        padding: 18px 51px 17px;
+
+        @media (max-width:$tablet-max) {
+            margin-top: 35px;
+            padding: 14px 25px;
+        }
+    }
+
+    &__warning {
+        text-align: center;
+        margin-top: 45px;
+        font-size: 13px;
+        font-weight: 350;
+        line-height: 125%;
+
+        a {
+            color: var(--blue);
+            text-decoration: underline;
+        }
+
+        @media (max-width:$tablet-max) {
+            margin-top: 30px;
+        }
+    }
+
+    @media (max-width:$mobile-max) {
+        width: 95%;
+        padding: 60px 15px 40px;
+    }
+}
+
+
+
+.checkbox-primary {
+
+    &__input {}
+
+    &__label {}
+
+    &__text {}
+}
